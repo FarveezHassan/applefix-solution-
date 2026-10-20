@@ -1,0 +1,24 @@
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font-family:var(--display);font-weight:700;font-stretch:100%;font-size:15px;letter-spacing:.04em;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:var(--blue-d)}
+.btn-ghost{border-color:var(--navy);color:var(--navy);background:transparent}.btn-ghost:hover{background:var(--navy);color:#fff}
+.btn-light{background:#fff;color:var(--navy)}.btn-light:hover{background:var(--sky)}
+.btn-outline-light{border-color:rgba(255,255,255,.5);color:#fff}.btn-outline-light:hover{background:#fff;color:var(--navy)}
+.btn-wa{background:#0E9F57;color:#fff}.btn-wa:hover{background:#0B8449}
+
+/* nav */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand img{height:54px;width:auto}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted);padding:6px 0;position:relative;transition:color .2s}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--blue);transition:width .25s}
+.nav ul a:hover,.nav ul a.on{color:var(--navy)}.nav ul a:hover::after,.nav ul a.on::after{width:100%}
+.nav .btn{min-height:44px;padding:0 22px;font-size:13px}
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);background:#fff;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger span{display:block;width:20px;height:2px;background:var(--navy);transition:transform .25s,opacity .2s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.drawer{display:none}
